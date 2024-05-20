@@ -25,8 +25,8 @@
         <img class="w-[80px] h-[80px] m-5 bg-slate-300 rounded-lg" src="Images/301061284_153630137286458_1204505676278690432_n-removebg-preview.png" alt="">
 
         <div class="flex items-center text-white space-x-4 mr-10">
-          <a class="font-semibold text-lg" href="login1.html">Login</a>
-          <a class="font-semibold text-lg" href="rgister1.html">Register</a>
+          <a class="font-semibold text-lg" href="login1.php">Login</a>
+          <a class="font-semibold text-lg" href="rgister1.php">Register</a>
 
         </div>
       </div>

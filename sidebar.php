@@ -47,7 +47,7 @@
                 <a href="Contact">Contact</a>
               </div>
               <div>
-                <a href="index.html"><button class="bg-red-500 hover:bg-red-700 pr-4 pl-4 pt-2 pb-2 rounded-3xl">Logout</button></a>
+                <a href="logout.php"><button class="bg-red-500 hover:bg-red-700 pr-4 pl-4 pt-2 pb-2 rounded-3xl">Logout</button></a>
               </div>
             </ul>
           </div>
