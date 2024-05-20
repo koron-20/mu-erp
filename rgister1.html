@@ -16,6 +16,11 @@
     .white{
       color: white;
     }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
   </style>
 </head>
 <body class="bg-sky-100 roboto">
@@ -26,20 +31,19 @@
   </header>
   <main>
     <div class="flex flex-row justify-center space-x-10  mt-8 mr-36 mb-20 ml-80 max-w-3xl h-max rounded-2xl shadow-2xl bg-sky-500">
-      <div class="pl-10 pt-10 pb-10">
-        <h1 class="roboto white font-extrabold text-center text-2xl ">Register</h1>
-        <h3 class="white font-semibold">User Name</h3>
-        <input class="rounded-2xl p-1 placeholder:p-2 outline-none" type="text" placeholder="Set User Name">
-        <h3 class="white font-semibold">Password:</h3>
-        <input class="rounded-2xl p-1 placeholder:p-2 outline-none" type="password" name="" id="" placeholder="Set password">
-        <h3 class="white font-semibold">Student ID</h3>
-        <input class="rounded-2xl p-1 placeholder:p-2 outline-none" type="text" name="" id="" placeholder="Enter your student ID">
-        <h3 class="white font-semibold">E-mail:</h3>
-        <input class="rounded-2xl p-1 placeholder:p-2 mb-3 outline-none" type="email" name="" id="" placeholder="Enter Your E-mail">
-        <button class="bg-blue-600 hover:bg-blue-800 text-white rounded-xl p-3 ml-10" type="submit">Sign Up</button>
+      <div class="pl-16 pt-10 pb-10 space-y-3">
+        <h1 class="roboto white font-extrabold ml-10 text-2xl ">Register</h1>
+        <form class="space-y-3 ml-3" action="" method="post">         
+          <input class="rounded-2xl p-2 placeholder:p-2 text-sm outline-none" type="text" name="" placeholder="Enter Your Name">                  
+          <input class="rounded-2xl p-2 placeholder:p-2 text-sm outline-none" type="number" name="studentid" id="studentid" placeholder="Enter Your Student ID">
+          <input class="rounded-2xl p-2 placeholder:p-2 text-sm outline-none" type="text" name="department" id="department" placeholder="Enter Department">       
+          <input class="rounded-2xl p-2 placeholder:p-2 text-sm mb-3 outline-none" type="email" name="" id="" placeholder="Enter Your E-mail">
+          <input class="rounded-2xl p-2 placeholder:p-2 text-sm outline-none" type="password" name="password" id="password" placeholder="Set Password"> 
+        </form>
+        <button class="bg-blue-600 hover:bg-blue-800 text-white rounded-xl p-3 ml-14 mt-5" type="submit">Sign Up</button>
       </div>
       <div>
-        <img class="rounded-2xl rounded-l-none w-full h-full " src="Images/mu (6).png" alt="">
+        <img class="rounded-2xl rounded-l-none w-full h-full ml-2" src="Images/mu (6).png" alt="">
       </div>
     </div>
     
