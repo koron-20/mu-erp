@@ -5,14 +5,14 @@ MU Exam and Result Portal is a website designed to streamline the process of con
 ## Features
 * Exam Schedule
 * Question Bank
-* Admit Card Download
+* Admit Card 
 * Result Publish
 * Downloading Copy of Result
 
 ## Technology Used
 * Frontend: HTML, CSS, JavaScript
-* Backend: 
-* Database: php
+* Backend: php
+* Database: mysql
 * Authentication:
 * Other: Tailwind for UI design
 
@@ -37,6 +37,9 @@ Answer:
 Answer:
 
 #### Question 3: I encountered a technical issue while using the portal. What should I do?
+Answer:
+
+#### Question 4: Are there any restrictions on accessing the portal from different devices or browsers?
 Answer:
 
 #### Question 4: Are there any restrictions on accessing the portal from different devices or browsers?
