@@ -43,7 +43,7 @@
   </header>
 
   <main>
-    <div class="flex flex-col space-y-16">
+    <div class="flex flex-col space-y-28">
       <div class="flex flex-row justify-between items-center relative bg-sky-700 w-auto h-[100px] ml-[200px]">
         <div>
           <img class="w-[80px] h-[80px] m-5" src="Images/MU EXAM & (1)-fotor-2024051717826.png" alt="">
