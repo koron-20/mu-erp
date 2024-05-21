@@ -21,7 +21,7 @@
         $query = "INSERT INTO `login` (`name`, `id`, `department`, `batch`, `bg`, `password`) VALUES ('$name', '$id', '$department', '$batch', '$bg ', '$password');";
         mysqli_query($conn, $query);
         echo "<script> alert('Registration Successful.') </script>";
-        header("Location: login1.php");
+        header("Location: login.php");
     }
   }
 ?>

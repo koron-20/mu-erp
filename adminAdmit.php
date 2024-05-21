@@ -11,9 +11,9 @@
 </head>
 <body>
   <header >
-    <?php
+  <?php
       require 'adminSidebar.php';
-    ?>
+  ?>
     
   </header>
 
@@ -39,20 +39,10 @@
 
       <div class="space-y-5  mt-48 ml-[550px] w-[500px] bg-gradient-to-r from-indigo-900 via-sky-800 to-cyan-500  text-center p-10 rounded-xl">
         <div>
-          <h1 class="white font-bold text-xl text-white mb-5">Upload Exam Scedule</h1>
-          <p class="text-white font-semibold">Enter Department and Batch:</p>
-          <form class="space-y-1" action="">
-            <select class="rounded-lg p-2" name="" id="">
-              <option value="">Select Department</option>
-              <option value="">CSE</option>
-              <option value="">EEE</option>
-              <option value="">LAW</option>
-              <option value="">BBA</option>
-              <option value="">SWE</option>
-              <option value="">ECONOMICS</option>
-
-            </select>
-            <input class="rounded-lg" type="text" name="" id="" placeholder="Batch">
+          <h1 class="white font-bold text-xl text-white mb-5">Upload Admit card</h1>
+          <p class="text-white font-semibold">Enter student id:</p>
+          <form action="">
+            <input class="rounded-lg" type="text" name="" id="" placeholder="Enter Student ID ">
           </form>
         </div>
         <div>
@@ -61,6 +51,7 @@
         <div>
           <button class="bg-green-500 hover:bg-green-700 text-white font-semibold p-2 rounded-2xl shadow-2xl" type="submit">Upload</button>
         </div>
+        
       </div>
     </div>    
   </main>
@@ -68,6 +59,22 @@
 </body>
 </html>
 
-<!--
 
+<!--
+      <div class="space-y-5  mt-48 ml-[550px] w-[500px] bg-gradient-to-r from-indigo-900 via-sky-800 to-cyan-500  text-center p-10 rounded-xl">
+      <div>
+        <h1 class="white font-bold text-xl mb-5">Upload Admit card</h1>
+        <p class="text-white font-semibold">Enter student id:</p>
+        <form action="">
+          <input class="rounded-lg" type="text" name="" id="" placeholder="Enter Student ID ">
+        </form>
+      </div>
+      <div>
+        <input class=" border-2 border-gray-300 bg-sky-100 rounded-lg" type="file" name="" id="">
+      </div>
+      <div>
+        <button class="bg-green-500 hover:bg-green-700 text-white font-semibold p-2 rounded-2xl shadow-2xl" type="submit">Upload</button>
+      </div>
+      
+    </div>
 -->
