@@ -10,7 +10,7 @@
         <!--Side bar-->
         <div class="bg-blue-900 w-[200px] h-[100vh] flex flex-col items-center absolute shadow-2xl">
           <div>
-            <ul class="flex flex-col p-10 pt-20 text-white space-y-10">
+            <ul class="flex flex-col p-10 pt-16 text-white space-y-10">
               <div class="flex items-center space-x-2 hover:font-bold">
                 <img class="w-[30px] h-[28px]" src="Images/image (1).png" alt="">
                 <a href="adminAdmit.php">Admit Card</a>

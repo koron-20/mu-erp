@@ -18,7 +18,7 @@
   </header>
 
   <main>
-    <div class="flex flex-col space-y-16">
+    <div class="flex flex-col space-y-36">
     <div class="flex flex-row justify-between items-center relative bg-sky-600 w-auto h-[100px] ml-[200px]">
         <div>
           <img class="w-[80px] h-[80px] m-5" src="Images/MU EXAM & (1)-fotor-2024051717826.png" alt="">
@@ -32,7 +32,7 @@
           </svg>
           <div class="indicator">
             <span class="indicator-item badge bg-green-500"></span> 
-            <div><a href="adminDash.php"><img class="w-12 h-12 rounded-full" src="Images/Untitled design (7).png" alt=""></a></div>
+            <div><a href="adminDash.php"><img class="w-12 h-12 rounded-full" src="Images/admin.png" alt=""></a></div>
           </div>
         </div>
       </div>
@@ -40,20 +40,6 @@
       <div class="space-y-5  mt-48 ml-[550px] w-[500px] bg-gradient-to-r from-indigo-900 via-sky-800 to-cyan-500  text-center p-10 rounded-xl">
         <div>
           <h1 class="white font-bold text-xl text-white mb-5">Upload Exam Scedule</h1>
-          <p class="text-white font-semibold">Enter Department and Batch:</p>
-          <form class="space-y-1" action="">
-            <select class="rounded-lg p-2" name="" id="">
-              <option value="">Select Department</option>
-              <option value="">CSE</option>
-              <option value="">EEE</option>
-              <option value="">LAW</option>
-              <option value="">BBA</option>
-              <option value="">SWE</option>
-              <option value="">ECONOMICS</option>
-
-            </select>
-            <input class="rounded-lg" type="text" name="" id="" placeholder="Batch">
-          </form>
         </div>
         <div>
           <input class=" border-2 border-gray-300 bg-sky-100 rounded-lg" type="file" name="" id="">

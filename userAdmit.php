@@ -1,3 +1,17 @@
+<?php
+  require 'config.php';
+
+  if(!empty($_SESSION['id'])){
+    $id = $_SESSION["id"];
+
+    $result = mysqli_query($conn, "SELECT * FROM `login` WHERE id='$id'");
+    $row = mysqli_fetch_assoc($result);
+  }
+  else{
+    header("Location: login.php");
+  }
+?>
+
 <!DOCTYPE html>
 <html data-theme="light" lang="en">
 <head>
@@ -25,9 +39,30 @@
 </head>
 <body class="robot">
   <header>
+    <?php
+        require 'userSidebar.php';
+    ?>
   </header>
   <main>
-    <div class="space-y-5  mt-48 ml-[550px] w-[500px] bg-gradient-to-r from-sky-800 via-sky-700 to-emerald-500  text-center p-10 rounded-xl shadow-2xl">
+  <div class="flex flex-col space-y-36">
+      <div class="flex flex-row justify-between items-center relative bg-sky-600 w-auto h-[100px] ml-[200px]">
+        <div>
+          <img class="w-[80px] h-[80px] m-5" src="Images/MU EXAM & (1)-fotor-2024051717826.png" alt="">
+        </div>
+        <img class="w-[200px] h-[80px] m-5" src="Images/301061284_153630137286458_1204505676278690432_n-removebg-preview.png" alt="">
+
+        <div class="flex items-center text-white space-x-4 mr-10">
+          <p class="font-semibold">Hi, <?php echo $row["name"]; ?></p>
+          <svg class="w-10" data-slot="icon" fill="none" stroke-width="1.5" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"></path>
+          </svg>
+          <div class="indicator">
+            <span class="indicator-item badge bg-green-500"></span> 
+            <div><a href="userDash.php"><img class="w-12 h-12 rounded-full" src="Images/Untitled design (7).png" alt=""></a></div>
+          </div>
+        </div>
+      </div>
+    <div class="space-y-5  mt-48 ml-[550px] w-[500px] bg-gradient-to-r from-indigo-800 via-sky-600 to-cyan-500  text-center p-10 rounded-xl shadow-2xl">
       <div>
         <h1 class="white font-bold text-xl mb-5">Download Admit card</h1>
         <p class="text-white font-semibold">Enter student id:</p>

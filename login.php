@@ -63,12 +63,12 @@
 </head>
 <body class="bg-sky-100 roboto">
   <header>
-    <div class="ml-[620px] pt-10">
+    <div class="ml-[630px] pt-10">
       <img class="w-[250px] h-[100px] " src="Images/301061284_153630137286458_1204505676278690432_n-removebg-preview.png" alt="">
     </div>
   </header>
   <main>
-    <div class="flex flex-row justify-center space-x-10  mt-8 mr-36 mb-28 ml-80 max-w-2xl h-max rounded-2xl shadow-2xl bg-sky-500">
+    <div class="flex flex-row justify-center space-x-10  mt-8 mr-36 mb-28 ml-96 max-w-2xl h-max rounded-2xl shadow-2xl bg-sky-500">
       <div>
         <img class="rounded-2xl nded rounded-r-none w-full h-full " src="Images/mu(11).png" alt="">
       </div>
@@ -78,9 +78,8 @@
           <input class="p-1 rounded-2xl placeholder:p-2 outline-none" type="text" name="id" id="id" placeholder="Enter Your ID">
           <input class="p-1 rounded-2xl placeholder:p-2 outline-none " type="password" name="password" id="password" placeholder="Enter Password">
                 
-          <!-- <p class="ml-12 mb-10 white text-sm">Forgot password?</p> -->
           <a href=""><button class="bg-blue-600 hover:bg-blue-800 p-2 rounded-xl white mt-5 ml-14 mb-3" name="login" id="login">Login</button></a>
-          <h3 class="text-white mb-20 ml-5">New user? <span><a class="text-cyan-50 text-lg" href="rgister1.php">Register</a></span> </h3>
+          <h3 class="text-white mb-20 ml-5">New user? <span><a class="text-cyan-50 text-lg" href="register.php">Register</a></span> </h3>
         </form>  
 
 

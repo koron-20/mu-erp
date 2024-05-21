@@ -18,7 +18,7 @@
   </header>
 
   <main>
-    <div class="flex flex-col space-y-16">
+    <div class="flex flex-col space-y-36">
     <div class="flex flex-row justify-between items-center relative bg-sky-600 w-auto h-[100px] ml-[200px]">
         <div>
           <img class="w-[80px] h-[80px] m-5" src="Images/MU EXAM & (1)-fotor-2024051717826.png" alt="">
@@ -32,7 +32,7 @@
           </svg>
           <div class="indicator">
             <span class="indicator-item badge bg-green-500"></span> 
-            <div><a href="adminDash.php"><img class="w-12 h-12 rounded-full" src="Images/Untitled design (7).png" alt=""></a></div>
+            <div><a href="adminDash.php"><img class="w-12 h-12 rounded-full" src="Images/admin.png" alt=""></a></div>
           </div>
         </div>
       </div>
