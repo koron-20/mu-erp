@@ -1,3 +1,69 @@
+<?php
+  require 'config.php';
+
+  //check if file is uploaded
+  if(isset($_POST['submit'])){
+    $targetDir = "admit/";
+    $targetFile = $targetDir . basename($_FILES["pdfFile"]["name"]);
+    $fileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
+  
+
+    // check if file is a pdf and less than 2MB
+    if($fileType != "pdf"){
+      echo "<script> alert('Only pdf files are allowed to upload.') </script>";
+    }
+    else{
+      //move upload file to uploads folder
+      if(move_uploaded_file($_FILES["pdfFile"]["tmp_name"], $targetFile)){
+
+        //insert into database
+        $id = $_POST["id"];
+
+        
+
+        $filename = $_FILES["pdfFile"]["name"];
+        $folder_path = $targetDir;
+        
+        $duplicate = mysqli_query($conn, "SELECT * FROM `admit` WHERE id='$id'");
+        $primHave = mysqli_query($conn, "SELECT * FROM `login` WHERE id='$id'");
+        
+        if(mysqli_num_rows($primHave) <= 0){
+          echo "<script> alert('No Such Student') </script>";
+        }
+
+        else if(mysqli_num_rows($duplicate) > 0){
+          echo "<script> alert('Already Uploaded Admit Card to this ID.') </script>";
+        }
+
+        else{
+          $sql = "INSERT INTO `admit` (`id`, `filename`, `foldername`) 
+                                  VALUES ('$id', '$filename', '$folder_path')";
+
+          if($conn-> query($sql) === TRUE){
+            echo "<script> alert('File Uploaded Successfully.') </script>";
+          }
+          else{
+            echo "Error: " . $sql . "</br>" . $conn->error;
+          }
+        }
+      }
+      else{
+        echo "<script> alert('Error Uploading File!') </script>";
+      }
+    }
+  }
+
+
+  //close connection database
+  $conn -> close();
+?>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html data-theme="light"  lang="en">
 <head>
@@ -10,7 +76,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </head>
 <body>
-  <header >
+  <header>
   <?php
       require 'adminSidebar.php';
   ?>
@@ -38,20 +104,18 @@
       </div>
 
       <div class="space-y-5  mt-48 ml-[550px] w-[500px] bg-gradient-to-r from-indigo-900 via-sky-800 to-cyan-500  text-center p-10 rounded-xl">
-        <div>
-          <h1 class="white font-bold text-xl text-white mb-5">Upload Admit card</h1>
-          <p class="text-white font-semibold">Enter student id:</p>
-          <form action="">
-            <input class="rounded-lg" type="text" name="" id="" placeholder="Enter Student ID ">
-          </form>
-        </div>
-        <div>
-          <input class=" border-2 border-gray-300 bg-sky-100 rounded-lg" type="file" name="" id="">
-        </div>
-        <div>
-          <button class="bg-green-500 hover:bg-green-700 text-white font-semibold p-2 rounded-2xl shadow-2xl" type="submit">Upload</button>
-        </div>
-        
+        <form class="space-y-5" action="" method="post" enctype="multipart/form-data">
+          <div>
+            <h1 class="white font-bold text-xl text-white mb-5">Upload Admit card</h1>
+              <input class="rounded-lg" type="text" name="id" id="id" placeholder="Enter Student ID ">
+          </div>
+          <div>
+            <input class=" border-2 border-gray-300 bg-sky-100 rounded-lg" type="file" name="pdfFile" id="pdfFile">
+          </div>
+          <div>
+            <button class="bg-green-500 hover:bg-green-700 text-white font-semibold p-2 rounded-2xl shadow-2xl" name="submit" id="submit" type="submit">Upload</button>
+          </div>
+        </form>
       </div>
     </div>    
   </main>
