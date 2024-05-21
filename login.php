@@ -79,12 +79,14 @@
           <input class="p-1 rounded-2xl placeholder:p-2 outline-none " type="password" name="password" id="password" placeholder="Enter Password">
                 
           <a href=""><button class="bg-blue-600 hover:bg-blue-800 p-2 rounded-xl white mt-5 ml-14 mb-3" name="login" id="login">Login</button></a>
-          <h3 class="text-white mb-20 ml-5">New user? <span><a class="text-cyan-50 text-lg" href="register.php">Register</a></span> </h3>
+          <h3 class="text-white text-sm mb-20 ml-5">New user? <span><a class="text-white text-lg hover:ease-in-out duration-200 hover:text-xl " href="register.php">Register</a></span> </h3>
         </form>  
 
 
 
       </div>
+
+
     </div>
   </main>
   <footer>

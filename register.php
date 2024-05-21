@@ -70,7 +70,7 @@
     </div>
   </header>
   <main>
-    <div class="flex flex-row justify-center space-x-10  mt-8 mr-36 mb-20 ml-80 lg:max-w-3xl lg:h-1/3 rounded-2xl shadow-2xl bg-sky-500">
+    <div class="flex flex-row justify-center space-x-10 mt-8 mr-36 mb-24 ml-80 lg:max-w-3xl lg:h-1/3 rounded-2xl shadow-2xl bg-sky-500">
       <div class="pl-16 pt-10 pb-10 space-y-3">
         <h1 class="roboto white font-extrabold ml-10 text-2xl ">Register</h1>
           <form class="space-y-3 ml-3" action="" method="post">         
@@ -92,7 +92,7 @@
  
             <input class="rounded-2xl p-2 placeholder:p-2 text-sm outline-none" type="password" name="password" id="password" placeholder="Set Password" required> 
             <button class="bg-blue-600 hover:bg-blue-800 text-white rounded-xl p-3 ml-12 mt-5" name="submit" id="submit" type="submit">Sign Up</button>
-            <p class="text-white">Already registerd?<span><a class="text-lg" href="login.php"> Login</a></span></p>
+            <p class="text-white text-sm">Already registerd?<span><a class="text-lg pl-2 hover:ease-in-out duration-200 hover:text-xl"  href="login.php">  Login</a></span></p>
           </form>
           
         </div>

@@ -43,7 +43,7 @@
   </header>
 
   <main>
-    <div class="flex flex-col space-y-28">
+    <div class="flex flex-col space-y-16">
       <div class="flex flex-row justify-between items-center relative bg-sky-700 w-auto h-[100px] ml-[200px]">
         <div>
           <img class="w-[80px] h-[80px] m-5" src="Images/MU EXAM & (1)-fotor-2024051717826.png" alt="">
@@ -51,8 +51,8 @@
         <img class="w-[200px] h-[80px] m-5" src="Images/301061284_153630137286458_1204505676278690432_n-removebg-preview.png" alt="">
         
         <div class="flex items-center text-white space-x-4 mr-10">
-          <a class="font-semibold text-lg" href="login.php">Login</a>
-          <a class="font-semibold text-lg" href="register.php">Register</a>
+          <a class="font-semibold text-lg hover:ease-in-out duration-200 hover:text-xl" href="login.php">Login</a>
+          <a class="font-semibold text-lg hover:ease-in-out duration-200 hover:text-xl" href="register.php">Register</a>
 
         </div>
       </div>

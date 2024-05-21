@@ -34,7 +34,7 @@
 
   <main>
     <div class="flex flex-col space-y-36">
-      <div class="flex flex-row justify-between items-center relative bg-sky-700 w-auto h-[100px] ml-[200px]">
+      <div class="flex flex-row justify-between items-center relative bg-sky-600 w-auto h-[100px] ml-[200px]">
         <div>
           <img class="w-[80px] h-[80px] m-5" src="Images/MU EXAM & (1)-fotor-2024051717826.png" alt="">
         </div>
@@ -59,7 +59,7 @@
         <div class="space-y-3 text-white">
           <h1 class="font-extrabold text-xl ml-20 mt-10">Profile</h1>
           <p class="ml-10 font-semibold">Name: <?php echo $row["name"];?></p>
-          <p class="ml-10 font-semibold">Id No: <?php echo $row["id"];?></p>
+          <p class="ml-10 font-semibold">User id: <?php echo $row["id"];?></p>
           <p class="ml-10 font-semibold">Department: <?php echo $row["department"];?></p>
           <p class="ml-10 font-semibold">Batch: <?php echo $row["batch"];?></p>
           <button class="bg-sky-200 text-blue-600 text-sm font-semibold pr-2 pl-2 pt-1 pb-1 rounded-xl ml-28 hover:bg-blue-600 hover:text-sky-200">Edit Profile</button>

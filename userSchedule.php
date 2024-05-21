@@ -65,10 +65,6 @@
     <div class="space-y-5  mt-48 ml-[550px] w-[500px] bg-gradient-to-r from-indigo-800 via-sky-600 to-cyan-500  text-center p-10 rounded-xl shadow-2xl">
       <div>
         <h1 class="white font-bold text-xl mb-5">Download Exam Schedule</h1>
-        <p class="text-white font-semibold">Enter student id:</p>
-        <form action="">
-          <input class=" rounded-lg " type="number" name="" id="" placeholder="Enter Student ID ">
-        </form>
       </div>
       <div>
        <button class="flex items-center text-center bg-green-500 hover:bg-green-700 text-white font-semibold p-2 pr-3 rounded-2xl shadow-2xl ml-32" type="submit">

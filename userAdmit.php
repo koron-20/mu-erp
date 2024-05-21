@@ -65,7 +65,6 @@
     <div class="space-y-5  mt-48 ml-[550px] w-[500px] bg-gradient-to-r from-indigo-800 via-sky-600 to-cyan-500  text-center p-10 rounded-xl shadow-2xl">
       <div>
         <h1 class="white font-bold text-xl mb-5">Download Admit card</h1>
-        <p class="text-white font-semibold">Enter student id:</p>
         <form action="">
           <input class=" rounded-lg " type="number" name="" id="" placeholder="Enter Student ID ">
         </form>
