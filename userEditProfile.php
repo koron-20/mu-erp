@@ -70,9 +70,6 @@
   </style>
 </head>
 <body>
-<?php
-    echo $row["id"];
-  ?>
 <header>
   <?php
       require 'userSidebar.php';

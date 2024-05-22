@@ -8,18 +8,17 @@
     $id = $_POST["id"];
     $department = $_POST["department"];
     $batch = $_POST["batch"];
-    $password = $_POST["password"];;
-    $image = "user.png";
+    $bg = $_POST["bg"];
+    $password = $_POST["password"];
 
 
     $duplicate = mysqli_query($conn, "SELECT * FROM `login` WHERE id='$id'");
     
     if(mysqli_num_rows($duplicate) > 0){
       echo "<script> alert('Id has already registerd.') </script>";
-      header("Location: register.php");
     }
     else{ 
-        $query = "INSERT INTO `login` (`name`, `id`, `department`, `batch`, `password`, `image`) VALUES ('$name', '$id', '$department', '$batch', '$password' ,'$image');";
+        $query = "INSERT INTO `login` (`name`, `id`, `department`, `batch`, `bg`, `password`) VALUES ('$name', '$id', '$department', '$batch', '$bg ', '$password');";
         mysqli_query($conn, $query);
         echo "<script> alert('Registration Successful.') </script>";
         header("Location: login.php");
@@ -66,11 +65,12 @@
 
 <body class="bg-sky-100 roboto">
   <header>
+    <!--Responsive-->
     <div class="visible lg:hidden">
-      <div class="ml-24 pt-10 lg:ml-[620px]">
+      <div class="ml-20 pt-14 ">
         <img class="w-[250px] h-[100px] " src="Images/301061284_153630137286458_1204505676278690432_n-removebg-preview.png" alt="">
       </div>
-      <div class="flex flex-col justify-center space-y-0 mt-20 ml-20 w-[300px] h-[500px] rounded-2xl shadow-2xl bg-sky-500">
+      <div class="flex flex-col justify-center space-y-0 mt-20 ml-16 w-[300px] h-[500px] rounded-2xl shadow-2xl bg-sky-500">
         <div class="pl-0 pt-10 pb-20 space-y-3">
           <div>
             <img class="rounded-2xl rounded-b-none w-full h-full" src="Images/logoResponse.png" alt="">
