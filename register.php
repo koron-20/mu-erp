@@ -8,17 +8,18 @@
     $id = $_POST["id"];
     $department = $_POST["department"];
     $batch = $_POST["batch"];
-    $bg = $_POST["bg"];
-    $password = $_POST["password"];
+    $password = $_POST["password"];;
+    $image = "user.png";
 
 
     $duplicate = mysqli_query($conn, "SELECT * FROM `login` WHERE id='$id'");
     
     if(mysqli_num_rows($duplicate) > 0){
       echo "<script> alert('Id has already registerd.') </script>";
+      header("Location: register.php");
     }
     else{ 
-        $query = "INSERT INTO `login` (`name`, `id`, `department`, `batch`, `bg`, `password`) VALUES ('$name', '$id', '$department', '$batch', '$bg ', '$password');";
+        $query = "INSERT INTO `login` (`name`, `id`, `department`, `batch`, `password`, `image`) VALUES ('$name', '$id', '$department', '$batch', '$password' ,'$image');";
         mysqli_query($conn, $query);
         echo "<script> alert('Registration Successful.') </script>";
         header("Location: login.php");

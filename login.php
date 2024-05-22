@@ -24,9 +24,18 @@
           $_SESSION["id"] = $id;
           header("Location: userDash.php");
         }
+        else if(empty($password)){
+          echo "<script> alert('Password cannot be empty!') </script>";
+        }
         else{
           echo "<script> alert('Wrong Password!') </script>";
         }
+      }
+      else if(empty($id)){
+        echo "<script> alert('Id cannot be empty!') </script>";
+      }
+      else if(empty($password)){
+        echo "<script> alert('Password cannot be empty!') </script>";
       }
       else{
         echo "<script> alert('User Not Registered!') </script>";
