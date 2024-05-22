@@ -53,29 +53,49 @@
           </div>
         </div>
       </div>
+      <form class="space-y-5" action="" method="post" enctype="multipart/form-data">
     <div class="space-y-5  mt-48 ml-[550px] w-[500px] bg-gradient-to-r from-indigo-800 via-sky-600 to-cyan-500  text-center p-10 rounded-xl shadow-2xl">
-      <div>
-        <select class="rounded-lg p-2" name="" id="">
-          <option value="">Select Course</option>
-          <option value="">CSE-123</option>
-          <option value="">GED-145</option>
-          <option value="">CSE-101</option>
-          <option value="">MAT-126</option>
-          <option value="">ENG-101</option>
-        </select>
-      </div>
       <div>
         <h1 class="white font-bold text-xl mb-5">Download Question Bank</h1>
       </div>
       <div>
-       <button class="flex items-center text-center bg-green-500 hover:bg-green-700 text-white font-semibold p-2 pr-3 rounded-2xl shadow-2xl ml-32" type="submit">
+      <input class="rounded-lg" type="text" name="code" id="code" placeholder="Course Code" required>
+      <input class="rounded-lg mt-2" type="text" name="batch" id="batch" placeholder="Batch" required>
+      </div>
+      <div>
+       <button class="flex items-center text-center bg-green-500 hover:bg-green-700 text-white font-semibold p-2 pr-3 rounded-2xl shadow-2xl ml-32" type="submit" name="submit" id="submit">
         <svg class="w-10 h-7" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m.75 12 3 3m0 0 3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"></path>
-        </svg> Download
+        </svg> Load Question
        </button>
+
+       <?php
+          
+          if(isset($_POST["submit"])){
+            $code = $_POST["code"];
+            $batch = $_POST["batch"];
+        
+              $result = mysqli_query($conn, "SELECT * FROM `qbank` WHERE ccode='$code' AND batch='$batch' ");
+              $row = mysqli_fetch_assoc($result);
+    
+              if(mysqli_num_rows($result) > 0){
+                echo '<a href="qBank/'.$row['filename'].'" class="btn btn-info mt-5" download>Download </a>';
+              }
+              else{
+                echo "<script> alert('No Question!') </script>";
+                // echo '<div class="alert alert-danger" role="alert">
+                //       A simple danger alert—check it out!
+                //       </div>';
+              }
+          }
+              
+        ?>
+
+
       </div>
       
     </div>
+    </form>
 
   </main>
 </body>

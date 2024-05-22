@@ -1,3 +1,11 @@
+<?php
+  require 'config.php';
+  if($_SESSION['id']!="admin"){
+    header("Location: aDenied.html");
+  }
+
+?>
+
 <!DOCTYPE html>
 <html data-theme="light"  lang="en">
 <head>

@@ -1,3 +1,64 @@
+<?php
+  require 'config.php';
+
+  if($_SESSION['id']!="admin"){
+    header("Location: aDenied.html");
+  }
+
+  //check if file is uploaded
+  if(isset($_POST['submit'])){
+    $targetDir = "qBank/";
+    $targetFile = $targetDir . basename($_FILES["pdfFile"]["name"]);
+    $fileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
+  
+
+    // check if file is a pdf and less than 2MB
+    if($fileType != "pdf"){
+      echo "<script> alert('Only pdf files are allowed to upload.'); window.location.href = 'adminQuestion.php';</script>";
+    }
+    else{
+      //move upload file to uploads folder
+      if(move_uploaded_file($_FILES["pdfFile"]["tmp_name"], $targetFile)){
+
+        //insert into database
+        $code = $_POST["code"];
+        $batch = $_POST["batch"];
+        
+
+        $filename = $_FILES["pdfFile"]["name"];
+        $folder_path = $targetDir;
+        
+        $duplicate = mysqli_query($conn, "SELECT * FROM `qbank` WHERE ccode='$code' AND batch='$batch' ");
+        
+
+        if(mysqli_num_rows($duplicate) > 0){
+          echo "<script> alert('Already Uploaded Question.'); window.location.href = 'adminQuestion.php';</script>";
+        }
+        else {
+          $sql = "INSERT INTO `qbank` (`ccode`, `batch`, `filename`, `foldername`) 
+                            VALUES ('$code', '$batch', '$filename', '$folder_path');";
+
+          if($conn-> query($sql) === TRUE){
+            echo "<script> alert('File Uploaded Successfully.'); window.location.href = 'adminQuestion.php';</script>";
+          }
+          else{
+            echo "Error: " . $sql . "</br>" . $conn->error;
+          }
+        }
+      }
+      else{
+        echo "<script> alert('Error Uploading File!'); window.location.href = 'adminQuestion.php';</script>";
+      }
+    }
+  }
+
+
+  //close connection database
+  $conn -> close();
+?>
+
+
+
 <!DOCTYPE html>
 <html data-theme="light"  lang="en">
 <head>
@@ -37,26 +98,22 @@
       </div>
 
       <div class="space-y-5  mt-48 ml-[550px] w-[500px] bg-gradient-to-r from-indigo-900 via-sky-800 to-cyan-500  text-center p-10 rounded-xl">
-        <div>
+        <form class="space-y-5" action="" method="post" enctype="multipart/form-data"> 
+          <div>
           <h1 class="white font-bold text-xl text-white mb-5">Upload Question Bank</h1>
-          <p class="text-white font-semibold">Enter course code:</p>
-          <form action="">
-            <input class="rounded-lg" type="text" name="studentid" id="" placeholder="Enter course code">
-          </form>
+            <input class="rounded-lg" type="text" name="code" id="code" placeholder="Enter Course Code" required>
+            <input class="rounded-lg mt-4" type="text" name="batch" id="batch" placeholder="Enter Batch" required>
         </div>
         <div>
-          <input class=" border-2 border-gray-300 bg-sky-100 rounded-lg" type="file" name="" id="">
+          <input class=" border-2 border-gray-300 bg-sky-100 rounded-lg" type="file" name="pdfFile" id="pdfFile">
         </div>
         <div>
-          <button class="bg-green-500 hover:bg-green-700 text-white font-semibold p-2 rounded-2xl shadow-2xl" type="submit">Upload</button>
+          <button class="bg-green-500 hover:bg-green-700 text-white font-semibold p-2 rounded-2xl shadow-2xl" name="submit" id="submit" type="submit">Upload</button>
         </div>
+        </form>
       </div>
     </div>    
   </main>
   
 </body>
 </html>
-
-<!--
-
--->

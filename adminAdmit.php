@@ -1,6 +1,10 @@
 <?php
   require 'config.php';
 
+  if($_SESSION['id']!="admin"){
+    header("Location: aDenied.html");
+  }
+
   //check if file is uploaded
   if(isset($_POST['submit'])){
     $targetDir = "admit/";
@@ -85,7 +89,7 @@
 
   <main>
     <div class="flex flex-col space-y-36">
-    <div class="flex flex-row justify-between items-center relative bg-sky-600 w-auto h-[100px] ml-[200px]">
+     <div class="flex flex-row justify-between items-center relative bg-sky-600 w-auto h-[100px] ml-[200px]">
         <div>
           <img class="w-[80px] h-[80px] m-5" src="Images/MU EXAM & (1)-fotor-2024051717826.png" alt="">
         </div>
@@ -107,7 +111,7 @@
         <form class="space-y-5" action="" method="post" enctype="multipart/form-data">
           <div>
             <h1 class="white font-bold text-xl text-white mb-5">Upload Admit card</h1>
-              <input class="rounded-lg" type="text" name="id" id="id" placeholder="Enter Student ID ">
+            <input class="rounded-lg" type="text" name="id" id="id" placeholder="Enter Student ID ">
           </div>
           <div>
             <input class=" border-2 border-gray-300 bg-sky-100 rounded-lg" type="file" name="pdfFile" id="pdfFile">
@@ -116,8 +120,8 @@
             <button class="bg-green-500 hover:bg-green-700 text-white font-semibold p-2 rounded-2xl shadow-2xl" name="submit" id="submit" type="submit">Upload</button>
           </div>
         </form>
-      </div>
-    </div>    
+      </div> 
+    </div>   
   </main>
   
 </body>

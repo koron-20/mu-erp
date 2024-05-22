@@ -2,17 +2,17 @@
 
   require 'config.php';
 
-  if(isset($_POST["login"])){
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_POST["id"];
     $password = $_POST["password"];
 
     if($id=="admin"){
       if($password=="admin"){
-        $_SESSION["id"] = $id;
+        $_SESSION["id"] = "admin";
         header("Location: adminDash.php");
       }
       else{
-        echo "<script> alert('Wrong Password!') </script>";
+        echo "<script> alert('Wrong Password!'); window.location.href = 'login.php'; </script>";
       }
     }
     else{
@@ -22,23 +22,24 @@
         if($password == $row["password"]){
           //$_SESSION["login"] = true;
           $_SESSION["id"] = $id;
+          // echo "<script> alert('Login Successful!'); window.location.href = 'userDash.php'; </script>";
           header("Location: userDash.php");
         }
         else if(empty($password)){
-          echo "<script> alert('Password cannot be empty!') </script>";
+          echo "<script> alert('Password cannot be empty!'); window.location.href = 'login.php'; </script>";
         }
         else{
-          echo "<script> alert('Wrong Password!') </script>";
+          echo "<script> alert('Wrong Password!'); window.location.href = 'login.php'; </script>";
         }
       }
       else if(empty($id)){
-        echo "<script> alert('Id cannot be empty!') </script>";
+        echo "<script> alert('Id cannot be empty!'); window.location.href = 'login.php'; </script>";
       }
       else if(empty($password)){
-        echo "<script> alert('Password cannot be empty!') </script>";
+        echo "<script> alert('Password cannot be empty!'); window.location.href = 'login.php'; </script>";
       }
       else{
-        echo "<script> alert('User Not Registered!') </script>";
+        echo "<script> alert('User Not Registered!'); window.location.href = 'login.php'; </script>";
       }
     }
 
@@ -89,15 +90,8 @@
               <a href=""><button class="bg-blue-600 hover:bg-blue-800 p-2 rounded-xl white mt-5 ml-14 mb-3" name="login" id="login">Login</button></a>
               <h3 class="text-white text-sm mb-20 ml-5">New user? <span><a class="text-white text-lg hover:ease-in-out duration-200 hover:text-xl " href="register.php">Register</a></span> </h3>
             </form>  
-
-
-
           </div>
-
-
         </div>
-
-
   </header>
   <main>
     <div class>

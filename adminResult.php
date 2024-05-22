@@ -1,6 +1,10 @@
 <?php
   require 'config.php';
 
+  if($_SESSION['id']!="admin"){
+    header("Location: aDenied.html");
+  }
+
   //check if file is uploaded
   if(isset($_POST['submit'])){
     $targetDir = "result/";
