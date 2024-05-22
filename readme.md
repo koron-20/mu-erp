@@ -9,11 +9,12 @@ MU Exam and Result Portal is a website designed to streamline the process of con
 
 ## Technology Used
 * Frontend: HTML, CSS, JavaScript
-
 * Backend: PHP
 * Database: MySQL
-* Authentication:
+* Code Editor: VS Code
 * Other: Tailwind for UI design
+  
+  
 
 ## Acknowledgements
 This project was inspired by the need for a centralized exam and result management system in Metropolitan University.
