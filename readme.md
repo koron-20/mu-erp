@@ -11,8 +11,8 @@ MU Exam and Result Portal is a website designed to streamline the process of con
 
 ## Technology Used
 * Frontend: HTML, CSS, JavaScript
-* Backend: php
-* Database: mysql
+* Backend: PHP
+* Database: MySQL
 * Authentication:
 * Other: Tailwind for UI design
 
@@ -33,14 +33,10 @@ This project was inspired by the need for a centralized exam and result manageme
 #### Question 1: How do I register as a user on the Exam and Result Portal?
 Answer:
 
-#### Question 2: How can I schedule an exam as an administrator? 
+#### Question 2: I encountered a technical issue while using the portal. What should I do?
 Answer:
 
-#### Question 3: I encountered a technical issue while using the portal. What should I do?
+#### Question 3: Are there any restrictions on accessing the portal from different devices or browsers?
 Answer:
 
-#### Question 4: Are there any restrictions on accessing the portal from different devices or browsers?
-Answer:
 
-#### Question 4: Are there any restrictions on accessing the portal from different devices or browsers?
-Answer:
