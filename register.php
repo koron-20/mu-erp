@@ -17,7 +17,7 @@
     else{ 
       $query = "INSERT INTO `login` (`name`, `id`, `department`, `batch`, `password`, `image`) VALUES ('$name', '$id', '$department', '$batch', '$password' ,'$image');";
         mysqli_query($conn, $query);
-        echo "<script> alert('Registration Successful.'); window.location.href = 'login.php';</script>";
+        echo "<script> alert('Registration Successful. You Can Login Now!'); window.location.href = 'login.php';</script>";
     }
   }
 ?>

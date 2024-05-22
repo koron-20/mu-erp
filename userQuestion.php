@@ -49,7 +49,7 @@
           </svg>
           <div class="indicator">
             <span class="indicator-item badge bg-green-500"></span> 
-            <div><a href="userDash.php"><img class="w-12 h-12 rounded-full" src="Images/Untitled design (7).png" alt=""></a></div>
+            <div><a href="userDash.php"><img class="w-12 h-12 rounded-full" src="pPic/<?php echo $row['image']; ?>" alt=""></a></div>
           </div>
         </div>
       </div>

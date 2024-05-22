@@ -10,15 +10,25 @@
     $name = $_REQUEST["name"];
     $batch = $_REQUEST["batch"];
     $password = $_REQUEST["password"];
+    $bg = $_REQUEST["bg"];
+    $contact = $_REQUEST["contact"];
     $img = $_FILES['img']['name'];
     // $image = "image/user.png";
 
-    if((!empty($name)) && (!empty($department)) && (!empty($batch))){
-      $query = "UPDATE `login` SET `name` = '$name', `department`= '$department', `batch` = '$batch' WHERE `id` = '$id;'";
+    if((!empty($name)) && (!empty($batch))){
+      $query = "UPDATE `login` SET `name` = '$name', `batch` = '$batch' WHERE `id` = '$id;'";
       mysqli_query($conn, $query);
 
       if(!empty($password)){
         $query = "UPDATE `login` SET `password` = '$password' WHERE `id` = '$id';";
+        mysqli_query($conn, $query);
+      }
+      if(!empty($bg)){
+        $query = "UPDATE `login` SET `bg` = '$bg' WHERE `id` = '$id';";
+        mysqli_query($conn, $query);
+      }
+      if(!empty($contact)){
+        $query = "UPDATE `login` SET `contact` = '$contact' WHERE `id` = '$id';";
         mysqli_query($conn, $query);
       }
       if(!empty($img)){
@@ -28,16 +38,9 @@
         $query = "UPDATE `login` SET `image` = '$img' WHERE `id` = '$id';";
         mysqli_query($conn, $query);
       }
-
-      $_SESSION['successMsg'] = "Profile Has Been Up";
-      header('location: userDash.php');
+      
+      echo "<script> alert('Profile Updated Successfully.'); window.location.href = 'userDash.php'; </script>";
     }
-    else{
-      $_SESSION['errorMsg'] = "Empty field not accepted";
-      header('location: userEditProfile.php');
-      exit;
-    }
-
   }
   
 
@@ -90,22 +93,35 @@
           </svg>
           <div class="indicator">
             <span class="indicator-item badge bg-green-500"></span> 
-            <div><a href="userDash.php"><img class="w-12 h-12 rounded-full" src="Images/Untitled design (7).png" alt=""></a></div>
+            <div><a href="userDash.php"><img class="w-12 h-12 rounded-full" src="pPic/<?php echo $row['image']; ?>" alt=""></a></div>
           </div>
         </div>
       </div>
       <div class="space-y-5  mt-48 ml-[550px] w-[500px]  bg-gradient-to-r from-indigo-800 via-sky-600 to-cyan-500  p-10 rounded-xl shadow-2xl">
         <h1 class="roboto white font-extrabold ml-10 text-2xl text-center ">Edit Profile</h1>
         <form class="flex flex-col space-y-1 ml-3 pr-10 pl-10 text-white text-sm" action="" method="post" enctype="multipart/form-data">
-          <p>Name:</p>         
-          <input class="rounded-2xl p-2 placeholder:p-2 text-sm outline-none" type="text" name="name" value="<?php echo $row["name"]; ?>" placeholder="Enter Your Name" > 
-          <p>Batch:</p>
-          <input class="rounded-2xl p-2 placeholder:p-2 text-sm outline-none" type="text" value="<?php echo $row["batch"]; ?>" name="batch" id="batch" placeholder="Enter Your Batch" >     
-          <p>Upload Photo:</p>
-          <input class="rounded-2xl placeholder:p-2 text-sm outline-none border-2 bg-white" type="file" value="<?php echo $row["batch"]; ?>" name="img" id="img" >     
-          <p>Enter Password:</p>
+          <p class="ml-1.5">Name:</p>
+          <input class="rounded-2xl p-2 placeholder:p-2 text-sm text-black outline-none" type="text" name="name" value="<?php echo $row["name"]; ?>" placeholder="Enter Your Name" required> 
+          <p class="ml-1.5">Batch:</p>
+          <input class="rounded-2xl p-2 placeholder:p-2 text-sm text-black outline-none" type="text" value="<?php echo $row["batch"]; ?>" name="batch" id="batch" placeholder="Enter Your Batch" required>
+          <p class="ml-1.5">Blood Group:</p>
+          <select class="rounded-2xl p-2 placeholder:p-2 text-sm text-black outline-none" name="bg" id="bg" >
+                <option class="option1" value="">Select Blood Group</option>
+                <option value="A+" name="A+">A+</option> 
+                <option value="B+" name="B+">B+</option>
+                <option value="O+" name="O+">O+</option>
+                <option value="A-" name="A-">A-</option>
+                <option value="B-" name="B-">B-</option>
+                <option value="AB+" name="AB+">AB+</option> 
+                <option value="AB-" name="AB-">AB+</option> 
+              </select> 
+          <p class="ml-1.5">Contact:</p>
+          <input class="rounded-2xl p-2 placeholder:p-2 text-sm text-black outline-none" type="text" value="<?php echo $row["contact"]; ?>" name="contact" id="contact" placeholder="Enter Your Number" >     
+          <p class="ml-1.5">Upload Photo:</p>
+          <input class="rounded-2xl placeholder:p-2 text-sm text-black outline-none border-2 bg-white" type="file" value="<?php echo $row["batch"]; ?>" name="img" id="img" >     
+          <p class="ml-1.5">Enter Password:</p>
           <input class="rounded-2xl p-2 placeholder:p-2 text-sm outline-none" type="password" name="password" id="password" placeholder="Enter Password" > </br>
-          <button class="bg-green-600 hover:bg-green-800  text-white rounded-xl p-3 pl-5 pr-5 ml-5 mr-5 mt-5" name="submit" id="submit" type="submit"> Update Profile</button>
+          <button class="bg-green-500 hover:bg-green-700  text-white rounded-xl p-3 pl-5 pr-5 ml-5 mr-5 mt-5" name="submit" id="submit" type="submit"> Update Profile</button>
           
         </form>
       </div>  

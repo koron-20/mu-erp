@@ -1,6 +1,7 @@
 <?php
   require 'config.php';
   require 'userConfig.php';
+  // $bg = $row["bg"];
 ?>
 
 
@@ -114,7 +115,7 @@
         </div>
         <div class="space-y-3 text-white">
           <h1 class="font-extrabold text-xl ml-5 mt-5">Profile</h1>
-          <p class="ml-5 font-semibold">Name: <?php echo $row["name"];?></p>
+          <p class="ml-5 text-[140px]">Name: <?php echo $row["name"];?></p>
           <p class="ml-5 font-semibold">Id No: <?php echo $row["id"];?></p>
           <p class="ml-5 font-semibold">Department: <?php echo $row["department"];?></p>
           <p class="ml-5 font-semibold">Batch: <?php echo $row["batch"];?></p>
@@ -149,12 +150,12 @@
           <img class="lg:w-[200px] pl-10 pb-0 pt-14 " src="pPic/<?php echo $row['image']; ?>"  alt="">
         </div>
         <div class="space-y-3 text-white">
-          <h1 class="font-extrabold text-xl ml-20 mt-10">Profile</h1>
-          <p class="ml-10 font-semibold">Name: <?php echo $row["name"];?></p>
-          <p class="ml-10 font-semibold">Id No: <?php echo $row["id"];?></p>
-          <p class="ml-10 font-semibold">Department: <?php echo $row["department"];?></p>
-          <p class="ml-10 font-semibold">Batch: <?php echo $row["batch"];?></p>
-          <a href="userEditProfile.php"><button class="bg-sky-200 text-blue-600 text-sm font-semibold pr-2 pl-2 pt-1 pb-1 rounded-xl ml-28 hover:bg-blue-600 hover:text-sky-200">Edit Profile</button></a>
+          <h1 class="font-bold text-[40px ml-20 mt-5">Profile</h1>
+          <p class="ml-10 font-semibold text-[18px] ">Name: <?php echo $row["name"];?></p>
+          <p class="ml-10 font-semibold text-[18px]">Id No: <?php echo $row["id"];?></p>
+          <p class="ml-10 font-semibold text-[18px]">Department: <?php echo $row["department"];?></p>
+          <p class="ml-10 font-semibold text-[18px]">Batch: <?php echo $row["batch"];?></p>
+          <a href="userEditProfile.php"><button class="bg-sky-200 text-blue-600 text-sm font-semibold pr-2 pl-2 pt-1 pb-1 rounded-xl mt-2 ml-28 hover:bg-blue-600 hover:text-sky-200">Edit Profile</button></a>
         </div>
       </div>
     </div>    
