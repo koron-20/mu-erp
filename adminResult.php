@@ -88,7 +88,7 @@
   </header>
 
   <main>
-    <div class="flex flex-col space-y-36">
+    <div class="flex flex-col space-y-28">
     <div class="flex flex-row justify-between items-center relative bg-[#00afb9] w-auto h-[100px] ml-[200px]">
         <div>
           <img class="w-[80px] h-[80px] m-5" src="Images/MU EXAM & (1)-fotor-2024051717826.png" alt="">
@@ -107,7 +107,7 @@
         </div>
       </div>
 
-      <div class="space-y-5  mt-48 ml-[550px] w-[500px] bg-gradient-to-r from-indigo-600 via-cyan-600 to-cyan-500  text-center p-10 rounded-xl">
+      <div class="space-y-5  mt-48 ml-[490px] w-[500px] bg-gradient-to-r from-indigo-600 via-cyan-600 to-cyan-500  text-center p-10 rounded-xl">
         <form class="space-y-5" action="" method="post" enctype="multipart/form-data">
           <div>
             <h1 class="white font-bold text-xl text-white mb-5">Upload Result</h1>
