@@ -69,7 +69,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
+  <title>Schedule</title>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
@@ -85,7 +85,7 @@
 
   <main>
     <div class="flex flex-col space-y-36">
-    <div class="flex flex-row justify-between items-center relative bg-sky-600 w-auto h-[100px] ml-[200px]">
+    <div class="flex flex-row justify-between items-center relative bg-[#00afb9] w-auto h-[100px] ml-[200px]">
         <div>
           <img class="w-[80px] h-[80px] m-5" src="Images/MU EXAM & (1)-fotor-2024051717826.png" alt="">
         </div>
@@ -103,7 +103,7 @@
         </div>
       </div>
 
-      <div class="space-y-5  mt-48 ml-[550px] w-[500px] bg-gradient-to-r from-indigo-900 via-sky-800 to-cyan-500  text-center p-10 rounded-xl">
+      <div class="space-y-5  mt-48 ml-[550px] w-[500px] bg-gradient-to-r from-indigo-600 via-cyan-600 to-cyan-500  text-center p-10 rounded-xl">
         <form class="space-y-5" action="" method="post" enctype="multipart/form-data">
           <div>
             <h1 class="white font-bold text-xl text-white mb-5">Upload Exam Schedule</h1>

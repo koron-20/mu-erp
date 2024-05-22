@@ -79,7 +79,7 @@
   ?>
   </header>
   <main>
-    <div class="flex flex-col space-y-14">
+    <div class="flex flex-col space-y-10">
       <div class="flex flex-row justify-between items-center relative bg-sky-600 w-auto h-[100px] ml-[200px]">
         <div>
           <img class="w-[80px] h-[80px] m-5" src="Images/MU EXAM & (1)-fotor-2024051717826.png" alt="">
@@ -97,7 +97,7 @@
           </div>
         </div>
       </div>
-      <div class="space-y-5  mt-48 ml-[550px] w-[500px]  bg-gradient-to-r from-indigo-800 via-sky-600 to-cyan-500  p-10 rounded-xl shadow-2xl">
+      <div class="space-y-2  mt-28 ml-[550px] w-[500px]  bg-gradient-to-r from-indigo-800 via-sky-600 to-cyan-500  p-10 rounded-xl shadow-2xl">
         <h1 class="roboto white font-extrabold ml-10 text-2xl text-center ">Edit Profile</h1>
         <form class="flex flex-col space-y-1 ml-3 pr-10 pl-10 text-white text-sm" action="" method="post" enctype="multipart/form-data">
           <p class="ml-1.5">Name:</p>

@@ -27,7 +27,7 @@
 
   <main>
     <div class="flex flex-col space-y-36">
-    <div class="flex flex-row justify-between items-center relative bg-sky-600 w-auto h-[100px] ml-[200px]">
+    <div class="flex flex-row justify-between items-center relative bg-[#00afb9] w-auto h-[100px] ml-[200px]">
         <div>
           <img class="w-[80px] h-[80px] m-5" src="Images/MU EXAM & (1)-fotor-2024051717826.png" alt="">
         </div>
@@ -45,7 +45,7 @@
         </div>
       </div>
 
-      <div class="flex  space-x-4 relative ml-96 bg-gradient-to-r from-indigo-800 via-sky-600 to-cyan-500  w-[550px] h-[300px] ml-[550px] rounded-xl shadow-2xl">
+      <div class="flex  space-x-4 relative ml-96 bg-gradient-to-r from-indigo-600 via-cyan-600 to-cyan-500  w-[550px] h-[300px] ml-[550px] rounded-xl shadow-2xl">
         <div>
           <img class="w-[200px] pl-10 pb-0 pt-14 " src="Images/admin.png" alt="">
         </div>
