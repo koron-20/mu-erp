@@ -47,12 +47,12 @@
 
       <div class="flex  space-x-4 relative ml-96 bg-gradient-to-r from-indigo-800 via-sky-600 to-cyan-500  w-[550px] h-[300px] ml-[550px] rounded-xl shadow-2xl">
         <div>
-          <img class="w-[200px] pl-10 pb-0 pt-14 " src="Images/user.png" alt="">
+          <img class="w-[200px] pl-10 pb-0 pt-14 " src="Images/admin.png" alt="">
         </div>
         <div class="space-y-3 text-white">
           <h1 class="font-extrabold text-xl ml-20 mt-20">Profile</h1>
-          <p class="ml-10 font-semibold">Name: [admin name]</p>
-          <p class="ml-10 font-semibold">admin id: admin1</p>
+          <p class="ml-10 font-semibold">Name: Admin</p>
+          <p class="ml-10 font-semibold">Admin id: admin1</p>
           
         </div>
       </div>

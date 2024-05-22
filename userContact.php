@@ -45,7 +45,7 @@
   ?>
   </header>
   <main>
-  <div class="flex flex-col space-y-28">
+  <div class="flex flex-col space-y-20">
       <div class="flex flex-row justify-between items-center relative bg-sky-600 w-auto h-[100px] ml-[200px]">
         <div>
           <img class="w-[80px] h-[80px] m-5" src="Images/MU EXAM & (1)-fotor-2024051717826.png" alt="">
@@ -63,7 +63,7 @@
           </div>
         </div>
       </div>
-    <div class="ml-[550px]">
+    <div class="ml-[650px]">
       <div class="space-y-6">
         <img class="w-[350px] h-[250px]" src="Images/EKbrbk3UEAAHVF1.jpeg" alt="">
         <div class="space-y-3">

@@ -38,7 +38,7 @@
     <div class="flex flex-col space-y-36">
       <div class="flex flex-row justify-between items-center relative bg-sky-600 w-auto h-[100px] ml-[200px]">
         <div>
-          <img class="w-[80px] h-[80px] m-5" src="Images/MU EXAM & (1)-fotor-2024051717826.png" alt="">
+          <a href="userDash.php"><img class="w-[80px] h-[80px] m-5" src="Images/MU EXAM & (1)-fotor-2024051717826.png" alt=""></a>
         </div>
         <img class="w-[200px] h-[80px] m-5" src="Images/301061284_153630137286458_1204505676278690432_n-removebg-preview.png" alt="">
 
@@ -53,8 +53,9 @@
           </div>
         </div>
       </div>
-      <form action="" method="post">
+      
         <div class="space-y-5  mt-48 ml-[550px] w-[500px] bg-gradient-to-r from-indigo-800 via-sky-600 to-cyan-500  text-center p-10 rounded-xl shadow-2xl">
+          <form action="" method="post">
           <div>
             <h1 class="white font-bold text-xl mb-5">Download Admit card</h1>
           </div>

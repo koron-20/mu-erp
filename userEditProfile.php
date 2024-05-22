@@ -49,7 +49,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admit</title>
+  <title>Edit Profile</title>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
@@ -76,7 +76,7 @@
   ?>
   </header>
   <main>
-  <div class="flex flex-col space-y-36">
+    <div class="flex flex-col space-y-14">
       <div class="flex flex-row justify-between items-center relative bg-sky-600 w-auto h-[100px] ml-[200px]">
         <div>
           <img class="w-[80px] h-[80px] m-5" src="Images/MU EXAM & (1)-fotor-2024051717826.png" alt="">
@@ -94,28 +94,27 @@
           </div>
         </div>
       </div>
+      <div class="space-y-5  mt-48 ml-[550px] w-[500px]  bg-gradient-to-r from-indigo-800 via-sky-600 to-cyan-500  p-10 rounded-xl shadow-2xl">
+        <h1 class="roboto white font-extrabold ml-10 text-2xl text-center ">Edit Profile</h1>
+        <form class="flex flex-col space-y-1 ml-3 pr-10 pl-10 text-white text-sm" action="" method="post" enctype="multipart/form-data">
+          <p>Name:</p>         
+          <input class="rounded-2xl p-2 placeholder:p-2 text-sm outline-none" type="text" name="name" value="<?php echo $row["name"]; ?>" placeholder="Enter Your Name" > 
+          <p>Batch:</p>
+          <input class="rounded-2xl p-2 placeholder:p-2 text-sm outline-none" type="text" value="<?php echo $row["batch"]; ?>" name="batch" id="batch" placeholder="Enter Your Batch" >     
+          <p>Upload Photo:</p>
+          <input class="rounded-2xl placeholder:p-2 text-sm outline-none border-2 bg-white" type="file" value="<?php echo $row["batch"]; ?>" name="img" id="img" >     
+          <p>Enter Password:</p>
+          <input class="rounded-2xl p-2 placeholder:p-2 text-sm outline-none" type="password" name="password" id="password" placeholder="Enter Password" > </br>
+          <button class="bg-green-600 hover:bg-green-800  text-white rounded-xl p-3 pl-5 pr-5 ml-5 mr-5 mt-5" name="submit" id="submit" type="submit"> Update Profile</button>
+          
+        </form>
+      </div>  
       
-      <div class="flex flex-row justify-center space-x-10  mt-8 mr-36 mb-20 ml-80 lg:max-w-3xl lg:h-1/3 rounded-2xl shadow-2xl bg-sky-500">
-      <div class="pl-16 pt-10 pb-10 space-y-3">
-        <h1 class="roboto white font-extrabold ml-10 text-2xl ">Edit Profile</h1>
-          <form class="space-y-3 ml-3" action="" method="post" enctype="multipart/form-data">         
-            <input class="rounded-2xl p-2 placeholder:p-2 text-sm outline-none" type="text" name="name" value="<?php echo $row["name"]; ?>" placeholder="Enter Your Name" >                  
+      
 
-            <input class="rounded-2xl p-2 placeholder:p-2 text-sm outline-none" type="text" value="<?php echo $row["batch"]; ?>" name="batch" id="batch" placeholder="Enter Your Batch" >     
-            
-            <input class="rounded-2xl p-2 placeholder:p-2 text-sm outline-none" type="file" value="<?php echo $row["batch"]; ?>" name="img" id="img" >     
-            
-
-            <input class="rounded-2xl p-2 placeholder:p-2 text-sm outline-none" type="password" name="password" id="password" placeholder="Enter Password" > </br>
-            <button class="bg-blue-600 hover:bg-blue-800 text-white rounded-xl p-3 ml-12 mt-5" name="submit" id="submit" type="submit"> Update Profile</button>
-          
-          </form>
-          
-        </div>
       
     </div>
-      
-  </div>
   </main>
 </body>
 </html>
+
