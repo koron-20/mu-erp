@@ -96,7 +96,7 @@
   <main>
     <div class>
       <div class="ml-14 invisible lg:visible lg:ml-[630px] pt-10">
-          <img class="w-[250px] h-[100px] " src="Images/301061284_153630137286458_1204505676278690432_n-removebg-preview.png" alt="">
+          <a href="index.php"><img class="w-[250px] h-[100px] " src="Images/301061284_153630137286458_1204505676278690432_n-removebg-preview.png" alt=""></a>
       </div>
       <div class="flex flex-row invisible lg:visible justify-center space-x-10  lg:mt-8 lg:mr-36 lg:mb-28 lg:ml-96 lg:max-w-2xl lg:h-max rounded-2xl shadow-2xl bg-sky-500">
         <div>
