@@ -75,12 +75,12 @@
               $paymentResult = mysqli_query($conn, "SELECT * FROM `payment` WHERE id='$id'");
               $row = mysqli_fetch_assoc($result);
               $paymentRow = mysqli_fetch_assoc($paymentResult);
-              if(mysqli_num_rows($result) > 0){
-                if(mysqli_num_rows($paymentResult) > 0){
+              if(mysqli_num_rows($paymentResult) > 0){
+                if(mysqli_num_rows($result) > 0){
                   echo '<a href="admit/'.$row['filename'].'" class="btn btn-info mt-5" download>Download </a>';
                 }
                 else{
-                  echo "<script> alert('Please Clear your DUES First.') </script>";
+                  echo "<script> alert('Admit Card Not Published Yet!') </script>";
                 }
                 
               }

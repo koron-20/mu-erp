@@ -97,9 +97,8 @@
           </div>
         </div>
       </div>
-      <div class="space-y-2  mt-28 ml-[550px] w-[500px]  bg-gradient-to-r from-indigo-800 via-sky-600 to-cyan-500  p-10 rounded-xl shadow-2xl">
-        <h1 class="roboto white font-extrabold ml-10 text-2xl text-center ">Edit Profile</h1>
-        <form class="flex flex-col space-y-1 ml-3 pr-10 pl-10 text-white text-sm" action="" method="post" enctype="multipart/form-data">
+      <div class="space-y-2  mt-28 ml-[550px] w-[500px]  bg-gradient-to-r from-indigo-800 via-sky-600 to-cyan-500  p-2 pr-10 pl-10 rounded-xl shadow-2xl">
+        <form class="grid grid-col-2 space-y-1 mb-3 ml-3 pr-10 pl-10 text-white text-sm" action="" method="post" enctype="multipart/form-data">
           <p class="ml-1.5">Name:</p>
           <input class="rounded-2xl p-2 placeholder:p-2 text-sm text-black outline-none" type="text" name="name" value="<?php echo $row["name"]; ?>" placeholder="Enter Your Name" required> 
           <p class="ml-1.5">Batch:</p>
@@ -121,7 +120,7 @@
           <input class="rounded-2xl placeholder:p-2 text-sm text-black outline-none border-2 bg-white" type="file" value="<?php echo $row["batch"]; ?>" name="img" id="img" >     
           <p class="ml-1.5">Enter Password:</p>
           <input class="rounded-2xl p-2 placeholder:p-2 text-sm outline-none" type="password" name="password" id="password" placeholder="Enter Password" > </br>
-          <button class="bg-green-500 hover:bg-green-700  text-white rounded-xl p-3 pl-5 pr-5 ml-5 mr-5 mt-5" name="submit" id="submit" type="submit"> Update Profile</button>
+          <button class="bg-green-500 hover:bg-green-700  text-white rounded-xl p-2  ml-5 mr-5 mt-5" name="submit" id="submit" type="submit"> Update Profile</button>
           
         </form>
       </div>  

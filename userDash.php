@@ -128,7 +128,7 @@
   
     
     
-    <div class="hidden lg:visible lg:flex lg:flex-col lg:space-y-36">
+    <div class="hidden lg:visible lg:flex lg:flex-col lg:space-y-28">
       <div class="flex flex-row justify-between items-center relative bg-sky-600 lg:w-auto lg:h-[100px] lg:ml-[200px]">
         <div>
           <img class="w-[80px] h-[80px] m-5" src="Images/MU EXAM & (1)-fotor-2024051717826.png" alt="">
@@ -147,7 +147,7 @@
         </div>
       </div>
       
-      <div class="flex space-x-4 relative  bg-gradient-to-r from-indigo-800 via-sky-600 to-cyan-500  lg:w-[550px] h-[300px] lg:ml-[550px] rounded-xl shadow-2xl">
+      <div class="flex space-x-4 relative  bg-gradient-to-r from-indigo-800 via-sky-600 to-cyan-500  lg:w-[550px] h-[350px] lg:ml-[490px] rounded-xl shadow-2xl">
         <div>
           <img class="lg:w-[200px] pl-10 pb-0 pt-14 " src="pPic/<?php echo $row['image']; ?>"  alt="">
         </div>
@@ -157,6 +157,8 @@
           <p class="ml-10 font-semibold text-[18px]">Id No: <?php echo $row["id"];?></p>
           <p class="ml-10 font-semibold text-[18px]">Department: <?php echo $row["department"];?></p>
           <p class="ml-10 font-semibold text-[18px]">Batch: <?php echo $row["batch"];?></p>
+          <p class="ml-10 font-semibold">Blood Group: <?php echo $row["bg"];?></p>
+          <p class="ml-10 font-semibold">Contact: <?php echo $row["contact"];?></p>
           <a href="userEditProfile.php"><button class="bg-sky-200 text-blue-600 text-sm font-semibold pr-2 pl-2 pt-1 pb-1 rounded-xl mt-2 ml-28 hover:bg-blue-600 hover:text-sky-200">Edit Profile</button></a>
         </div>
       </div>
