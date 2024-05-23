@@ -20,10 +20,10 @@ MU Exam and Result Portal is a website designed to streamline the process of con
 This project was inspired by the need for a centralized exam and result management system in Metropolitan University.
 
 # Authors
-    * Prohor Paul
-    * Koron Chowdhury
-    * Mashiat Jarin
-    * Sutopa Dey
+  * Prohor Paul- Backend,Database
+  * Koron Chowdhury- Fronted,UI,Database & Graphics
+  * Mashiat Jarin- Frontend,UI & Content Writing
+  * Sutopa Dey- Team Management,Content Management
 
 # Screenshot
 
@@ -108,6 +108,19 @@ This project was inspired by the need for a centralized exam and result manageme
  ### Upload Result Page
 
  ![Screenshot 2024-05-23 000406](https://github.com/koron-20/mu-erp/assets/105550332/49a3e091-f854-469f-bb3a-7ac96db6c43d)
+
+
+### How to Setup
+* Install XAMPP Server
+* Start Apache and MySQL
+* Copy the this folder " to C:\xampp\htdocs
+* Open browser and type http://localhost/phpmyadmin/
+* Create a new Databse with name "project"
+* To open the file in browser type http://localhost/mu-erp/
+
+
+
+
 
 
 ## FAQ
